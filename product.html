@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kutus Bakery — Products</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/logo.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Kutus Bakery logo" />
+        <span>Kutus Bakery</span>
+      </a>
+      <nav aria-label="Primary" class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" aria-current="page">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌞</button>
+        <span class="cart">🛒 <span id="cartCount">0</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" aria-labelledby="products-heading">
+      <h1 id="products-heading">Our products</h1>
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="images/bread.jpg" alt="Artisan bread loaf" />
+          <div class="card-body">
+            <h2>Artisan Bread</h2>
+            <p>Slow-fermented, crispy crust, soft crumb.</p>
+            <p class="price">KES 250</p>
+            <button class="add-to-cart" data-product="Artisan Bread" data-price="250">Add to Cart</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cake.jpg" alt="Chocolate cake" />
+          <div class="card-body">
+            <h2>Chocolate Cake</h2>
+            <p>Decadent cocoa layers with ganache.</p>
+            <p class="price">KES 800</p>
+            <button class="add-to-cart" data-product="Chocolate Cake" data-price="800">Add to Cart</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookies.jpg" alt="Butter cookies" />
+          <div class="card-body">
+            <h2>Butter Cookies</h2>
+            <p>Classic buttery goodness, perfect with tea.</p>
+            <p class="price">KES 350</p>
+            <button class="add-to-cart" data-product="Butter Cookies" data-price="350">Add to Cart</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/bread.jpg" alt="Cinnamon rolls" />
+          <div class="card-body">
+            <h2>Cinnamon Rolls</h2>
+            <p>Soft rolls swirled with cinnamon sugar.</p>
+            <p class="price">KES 300</p>
+            <button class="add-to-cart" data-product="Cinnamon Rolls" data-price="300">Add to Cart</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cake.jpg" alt="Vanilla cupcakes" />
+          <div class="card-body">
+            <h2>Vanilla Cupcakes (6)</h2>
+            <p>Fluffy vanilla cupcakes with buttercream.</p>
+            <p class="price">KES 600</p>
+            <button class="add-to-cart" data-product="Vanilla Cupcakes (6)" data-price="600">Add to Cart</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookies.jpg" alt="Oat cookies" />
+          <div class="card-body">
+            <h2>Oat Cookies</h2>
+            <p>Chewy oats with a hint of cinnamon.</p>
+            <p class="price">KES 380</p>
+            <button class="add-to-cart" data-product="Oat Cookies" data-price="380">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Kutus Bakery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

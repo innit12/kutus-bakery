@@ -1,0 +1,116 @@
+:root {
+  --bg: #fffdf8;
+  --text: #1f1c17;
+  --muted: #6b6358;
+  --brand: #b3542e;      /* warm bakery accent */
+  --brand-alt: #f4a261;  /* secondary accent */
+  --card-bg: #ffffff;
+  --border: #e8e1d5;
+}
+
+[data-theme="dark"] {
+  --bg: #171413;
+  --text: #f0eae3;
+  --muted: #c7bfb2;
+  --brand: #f4a261;
+  --brand-alt: #b3542e;
+  --card-bg: #1f1c19;
+  --border: #3a322a;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; border-radius: 6px; }
+
+.container { width: 90%; max-width: 1000px; margin: 0 auto; }
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
+  position: sticky; top: 0; z-index: 100;
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0.75rem 0;
+}
+.brand { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--text); font-weight: 700; }
+.brand img { width: 36px; height: 36px; }
+
+.main-nav ul { display: flex; list-style: none; gap: 1rem; padding: 0; margin: 0; }
+.main-nav a {
+  text-decoration: none; color: var(--text); padding: 0.5rem 0.75rem; border-radius: 6px;
+}
+.main-nav a[aria-current="page"], .main-nav a:hover {
+  background: var(--brand-alt); color: #1f1c17; transition: background 200ms ease;
+}
+
+.actions { display: inline-flex; align-items: center; gap: 0.75rem; }
+#themeToggle {
+  background: var(--brand); color: #fff; border: none; border-radius: 20px; padding: 0.4rem 0.6rem; cursor: pointer;
+  transition: transform 200ms ease, background 200ms ease;
+}
+#themeToggle:hover { transform: translateY(-1px); background: var(--brand-alt); }
+
+.cart { font-weight: 700; color: var(--text); text-decoration: none; }
+#cartCount {
+  display: inline-block; min-width: 22px; text-align: center; background: var(--brand-alt); color: #1f1c17; border-radius: 12px; padding: 0 6px;
+}
+
+.hero {
+  padding: 3rem 0 2rem; text-align: center; background: linear-gradient(180deg, var(--card-bg), var(--bg));
+}
+.lead { color: var(--muted); font-size: 1.1rem; }
+
+.btn {
+  display: inline-block; background: var(--brand); color: #fff; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 200ms ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,0.15); background: var(--brand-alt); color: #1f1c17; }
+
+.grid { display: grid; gap: 1.25rem; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.card:hover {
+  transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); border-color: var(--brand-alt);
+}
+.card-body { padding: 0.9rem; }
+.card h3, .card h2 { margin: 0.25rem 0 0.25rem; }
+.card p { margin: 0.25rem 0; }
+.price { font-weight: 700; color: var(--brand); }
+
+.add-to-cart {
+  width: 100%; background: var(--brand); color: #fff; border: none; border-radius: 6px; padding: 0.5rem 0.75rem; cursor: pointer;
+  transition: background 200ms ease, transform 150ms ease;
+}
+.add-to-cart:hover { background: var(--brand-alt); color: #1f1c17; transform: translateY(-1px); }
+
+section.container { padding: 2rem 0; }
+
+form {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1rem;
+}
+.form-group { margin-bottom: 0.9rem; }
+label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+input, textarea {
+  width: 100%; padding: 0.6rem; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text);
+}
+input:focus, textarea:focus { outline: 2px solid var(--brand-alt); }
+
+.error { color: #b00020; min-height: 1rem; display: block; }
+.success { color: #0a7d2a; font-weight: 600; }
+
+.site-footer {
+  border-top: 1px solid var(--border); margin-top: 2rem; background: var(--card-bg);
+}
+.footer-inner { padding: 1rem 0; text-align: center; color: var(--muted); }

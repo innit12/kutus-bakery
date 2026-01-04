@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kutus Bakery — Fresh Daily</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/logo.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Kutus Bakery logo" />
+        <span>Kutus Bakery</span>
+      </a>
+      <nav aria-label="Primary" class="main-nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌞</button>
+        <a class="cart" href="products.html" aria-label="View cart">
+          🛒 <span id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="banner">
+      <div class="container">
+        <h1>Freshly baked in Kutus, every day.</h1>
+        <p id="greeting" class="lead"></p>
+        <p id="todayDate"></p>
+        <a class="btn" href="products.html">Shop today’s picks</a>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <h2 id="featured-heading">Customer favorites</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="images/bread.jpg" alt="Golden crust artisan bread" />
+            <div class="card-body">
+              <h3>Artisan Bread</h3>
+              <p>Slow-fermented loaf with a crisp crust and tender crumb.</p>
+              <p class="price">KES 250</p>
+              <button class="add-to-cart" data-product="Artisan Bread" data-price="250">Add to Cart</button>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/cake.jpg" alt="Chocolate cake slice" />
+            <div class="card-body">
+              <h3>Chocolate Cake</h3>
+              <p>Rich cocoa layers with silky ganache — perfect for celebrations.</p>
+              <p class="price">KES 800</p>
+              <button class="add-to-cart" data-product="Chocolate Cake" data-price="800">Add to Cart</button>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/cookies.jpg" alt="Assorted butter cookies" />
+            <div class="card-body">
+              <h3>Butter Cookies</h3>
+              <p>Melt-in-your-mouth cookies baked with real butter.</p>
+              <p class="price">KES 350</p>
+              <button class="add-to-cart" data-product="Butter Cookies" data-price="350">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Kutus Bakery. All rights reserved.</p>
+      <p>Located in Kutus, Kirinyaga County, Kenya.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
